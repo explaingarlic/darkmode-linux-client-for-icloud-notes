@@ -47,11 +47,11 @@ function createTrayIcon(mainWindow) {
     tray.on('click', onClick);
 
     mainWindow.on('show', () => {
-        tray.setHighlightMode('always');
+        tray.setToolTip('always');
     });
 
     mainWindow.on('hide', () => {
-        tray.setHighlightMode('never');
+        tray.setToolTip('never');
     });
 
     tray.setContextMenu(contextMenu);
